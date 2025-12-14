@@ -53,7 +53,7 @@ export default function About() {
           <CardHeader className="p-0 pb-4">
             <CardTitle className="text-2xl font-bold flex items-center gap-2">
                 <Code className="h-6 w-6 text-primary" />
-                Minha Jornada como Fullstack Júnior
+                Minha Jornada como <span className="text-primary">Fullstack Júnior</span>
             </CardTitle>
             <Separator className="mt-2 mb-4" />
           </CardHeader>

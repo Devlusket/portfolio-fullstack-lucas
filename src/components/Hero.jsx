@@ -36,7 +36,7 @@ export default function Hero() {
       
       {/* Subtítulo de Destaque Técnico (O seu diferencial) */}
       <p className="max-w-3xl text-xl sm:text-2xl text-center text-muted-foreground mb-8">
-        Desenvolvedor Fullstack Júnior | Next.js | TypeScript | Node.js | Serverless Architecture | PostgreSQL & Prisma
+        | Next.js | Javascript | TypeScript | Node.js | Serverless Architecture | PostgreSQL & Prisma
       </p>
 
       {/* Ação Principal: CTA para o SaaS Multi-tenant */}
@@ -47,7 +47,7 @@ export default function Hero() {
           size="lg"
           className="bg-primary hover:bg-primary/90 text-lg py-3 px-6 shadow-lg transition-all duration-300"
         >
-          <a href="[LINK-DO-SEU-SAAS-AQUI]" target="_blank" rel="noopener noreferrer">
+          <a href="https://meu-agendamento.vercel.app/" target="_blank" rel="noopener noreferrer">
             <Zap className="mr-2 h-5 w-5" />
             Ver SaaS em Produção
           </a>

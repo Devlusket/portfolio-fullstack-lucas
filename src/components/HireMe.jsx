@@ -11,7 +11,7 @@ const contactItems = [
     label: "E-mail",
     href: "mailto:tsuunakage@gmail.com",
     icon: Mail,
-    variant: "default", // Destaque para o principal
+    variant: "secondary", // Destaque para o principal
   },
   {
     label: "WhatsApp",
@@ -23,13 +23,13 @@ const contactItems = [
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/devlusket/",
     icon: Linkedin,
-    variant: "default", // Link terciário/social
+    variant: "secondary", // Link terciário/social
   },
   {
     label: "GitHub",
     href: "https://github.com/Devlusket/Devlusket", // Link corrigido
     icon: Github,
-    variant: "default", // Link terciário/social
+    variant: "secondary", // Link terciário/social
   },
 ];
 
@@ -44,7 +44,7 @@ export default function HireMe() {
         </CardHeader>
         <CardContent>
           <p className="mb-8 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Interessado em ter um Fullstack Júnior com experiência em SaaS Multi-tenant, Next.js 15 e segurança de dados? Envie uma mensagem ou vamos nos conectar.
+            Interessado em ter um Fullstack Júnior com experiência em SaaS com o ecossistema Javascript? Envie uma mensagem ou vamos nos conectar.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">

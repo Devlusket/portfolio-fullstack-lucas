@@ -3,6 +3,7 @@ import "./globals.css";
 
 // Importa o ThemeProvider que acabamos de criar
 import { ThemeProvider } from "./providers"; 
+import { icons } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,6 +19,10 @@ export const metadata = {
   title: "Portfólio Lucas Soares",
   description: "Lucas Soares Brito Desenvolvedor Fullstack",
 };
+
+icons: {
+  icon: '/app/icon.png';
+}
 
 export default function RootLayout({ children }) {
   return (

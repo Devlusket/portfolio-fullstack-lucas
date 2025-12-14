@@ -1,90 +1,162 @@
+import Link from "next/link";
+import { Zap, Github, ArrowRight } from "lucide-react";
+
+// Componentes Shadcn/ui
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+// Removidas as importações do Carousel, Dialog/Modal será no componente ProjectGalleryDialog
+
+// NOVO: Importe o componente de Galeria de Imagens
+import { ProjectGalleryDialog } from "@/components/project-gallery-dialog"; 
+
 export default function Projects() {
   const projects = [
     {
-      id: 1,
+      id: 0, 
+      title: "Plataforma SaaS de Agendamento Online Multi-tenant",
+      description: `
+        Uma Plataforma SaaS Multi-tenant de Agendamento Online que já está em produção e atendendo usuários ativos. Este projeto foi uma verdadeira imersão em arquitetura escalável e segurança de dados.
+      `,
+      details: [ 
+        "Arquitetura Serverless com Next.js 14 e Supabase (PostgreSQL).",
+        "Segurança via Row-Level Security (RLS) para isolamento de dados Multi-tenant.",
+        "Otimização de Banco de Dados com Connection Pooling (PgBouncer).",
+        "Automação crítica via Vercel Cron Jobs (limpeza de horários expirados).",
+        "Comunicação Transacional (WhatsApp e Email) e Timezones resolvidos.",
+      ],
+      image: "/images/MeusAgendamentosAreaCliente.png", // Imagem de capa
+      liveUrl: "https://meu-agendamento.vercel.app/",
+      codeUrl: "Repositório Privado (Propriedade Intelectual)",
+      stack: [
+        "Next.js 14 (App Router)", "React/JS", "PostgreSQL (Supabase)", 
+        "Prisma ORM", "Tailwind CSS", "Vercel", "RLS", "PgBouncer"
+      ],
+      highlight: true,
+      gallery: [
+          "/images/MeusAgendamentosAreaCliente.png", 
+          "/images/MeusAgendamentosAreaProfissional.png", 
+          "/images/MeusAgendamentosAreaAgendamento.png", 
+      ]
+    },
+    {
+      id: 1, 
       title: "Aplicativo de Despesas",
       description:
-        "Aplicativo pessoal de controle de despesas desenvolvido com Next.js e TypeScript, com design em Tailwind CSS. Permite adicionar, listar, marcar como pago e excluir despesas. Agora integrado ao Supabase / PostgreSQL e Prisma, com API construída via rotas do Next.js (pages/api) e controle das operações (insert, select, update, delete) diretamente no banco de dados. Totalmente responsivo, com modo claro e escuro.",
+        "Controle pessoal de despesas feito com Next.js e JavaScript/React, com design em Tailwind CSS. Implementa CRUD completo (Adicionar, Listar, Marcar como Pago e Excluir) com integração segura e robusta ao Supabase/PostgreSQL usando Prisma ORM.",
       image: "/images/despesasv2.png",
       liveUrl: "https://expenses-app-project.vercel.app/",
       codeUrl: "https://github.com/Devlusket/expenses-project",
+      stack: ["Next.js", "React", "Supabase", "Prisma", "Tailwind CSS"],
+      highlight: false,
+      gallery: null,
     },
     {
-      id: 2,
+      id: 2, 
       title: "Quiz dos Power Rangers",
       description:
-        "Quiz interativo feito com React, Next.js, Tailwind CSS e TypeScript. Usa json-server localmente e migrado para o frontend para funcionar no Vercel. Contém lógica de pontuação, embaralhamento de respostas e resultado final com imagem. Foco em aprendizado e experiência divertida.",
+        "Quiz interativo para demonstração de front-end dinâmico. Usa React, Next.js, Tailwind CSS e JavaScript. Contém lógica de pontuação, embaralhamento de respostas e resultado final. Excelente para demonstrar habilidades em manipulação de estado e UX.",
       image: "/images/powerrangers.png",
       liveUrl: "https://powerrangersquiz.vercel.app/",
       codeUrl: "https://github.com/Devlusket/pr-quiz-ts-next-project",
+      stack: ["React", "Next.js", "Tailwind CSS", "JavaScript"],
+      highlight: false,
+      gallery: null,
     },
-    {
-    id: 1, // Dando prioridade máxima, se a lista for ordenada.
-    title: "Plataforma SaaS de Agendamento Online Multi-tenant",
-    description: `
-    Uma Plataforma SaaS Multi-tenant de Agendamento Online que já está em produção e atendendo usuários ativos. Este projeto foi uma verdadeira imersão em arquitetura escalável e segurança de dados.
-        Front-end & Back-end: Next.js 14 (App Router) , React e Javascript/Typescript.
-Banco de Dados: PostgreSQL (Supabase) com Prisma ORM para modelagem relacional.
-Estilização: Tailwind CSS e Shadcn/ui  (Componentes) para uma interface responsiva e acessível.
-A escolha da arquitetura Serverless foi fundamental para a escalabilidade e o baixo custo operacional:
-Deploy e CI/CD: Utilização da Vercel para hospedagem, garantindo uma pipeline de Integração Contínua e Entrega Contínua (CI/CD).
-Otimização de Banco de Dados: Solucionei o desafio da exaustão de conexões no ambiente Serverless configurando o Connection Pooling via PgBouncer. Isso garante que o banco de dados PostgreSQL suporte picos de acesso sem falhar.
-Segurança de Dados (RLS): Implementação de Row-Level Security (RLS) no Supabase, assegurando o isolamento total dos dados e controlando o acesso granular entre Clientes, Profissionais e Funcionários  uma camada de segurança essencial em um SaaS Multi-tenant.
-Armazenamento em Nuvem: Uso do Vercel Blob Storage para upload e gerenciamento eficiente das imagens de perfil e portfólio dos estabelecimentos.
-Portfólio Dinâmico: O profissional tem total liberdade para alterar a grade de serviços, descrição e fazer a mudança dinâmica de dados do estabelecimento.
-Agendamento Inteligente: Sistema de criação de horários dinâmicos semanais  com validação de conflitos em tempo real.
-Autenticação Segura: Login social via Google OAuth 2.0 (NextAuth.js) para uma experiência de cadastro rápida e segura.
-Automação Crítica (Cron Jobs): Configurei rotinas automáticas (Vercel Cron Jobs) para a limpeza sanitária de horários expirados no banco de dados.
-Comunicação Transacional: Integração de serviços para confirmação de agendamentos via WhatsApp e Email Transacional.
-Timezones: Resolução da complexidade de manipular fusos horários (Timezones)  para que a plataforma mostre a hora correta tanto para o profissional quanto para o cliente em diferentes regiões.
-    `,
-    image: "/images/MeusAgendamentosAreaCliente.png",
-    liveUrl: "https://meu-agendamento.vercel.app/", 
-    codeUrl: "Repositório Privado (Propriedade Intelectual)", 
-    stack: [
-        "Next.js 14 (App Router)", "React/TypeScript", "PostgreSQL (Supabase)", 
-        "Prisma ORM", "Tailwind CSS", "Vercel Serverless", "RLS", "PgBouncer"
-    ]
-}
   ];
 
+  const sortedProjects = projects.sort((a, b) => (a.id > b.id ? 1 : -1));
+
   return (
-    <section id="projects" className="px-6 py-25 text-center">
-      <h2 className="text-xl sm:text-2xl font-bold mb-8 text-white">
-        Aqui estão alguns dos meus projetos mais recentes
+    <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground text-center mb-12">
+        <span className="text-primary">|</span> Projetos de Destaque
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="bg-indigo-800/50 text-white p-4 rounded-xl shadow-md flex flex-col"
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {sortedProjects.map((project) => (
+          <Card 
+            key={project.id} 
+            className={`flex flex-col h-full transition-all duration-300 overflow-hidden ${
+              project.highlight 
+                ? 'border-2 border-primary shadow-2xl shadow-primary/20 md:col-span-3' 
+                : 'hover:shadow-lg border-border'
+            }`}
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="h-78 object-cover rounded-md mb-4"
-            />
-            <h3 className="text-lg font-bold mb-2">{project.title}</h3>
-            <p className="text-sm text-left">{project.description}</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 mt-auto">
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-indigo-800 text-white px-4 py-2 rounded font-bold hover:bg-indigo-700"
+            
+            {/* NOVO: Substituído o bloco de imagem/carrossel pelo componente Dialog */}
+            <ProjectGalleryDialog project={project} />
+            
+            {/* Card Header */}
+            <CardHeader>
+              <CardTitle className={`text-2xl font-bold ${project.highlight ? 'text-primary' : 'text-foreground'}`}>
+                {project.title}
+              </CardTitle>
+              <CardDescription className="text-muted-foreground pt-1">
+                {project.description.trim().substring(0, 200) + '...'}
+              </CardDescription>
+            </CardHeader>
+
+            {/* Card Content */}
+            <CardContent className="flex-grow">
+              {/* Para o SaaS, listamos os detalhes técnicos */}
+              {project.details && (
+                <ul className="list-disc list-inside space-y-1 text-sm text-foreground/80 mb-4 ml-2">
+                  {project.details.map((detail, index) => (
+                    <li key={index} className="flex items-start">
+                       <ArrowRight className="h-4 w-4 mr-2 mt-1 text-primary flex-shrink-0" />
+                       <span className="flex-1">{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              
+              {/* Stack Técnica (Badges) */}
+              <Separator className="my-4" />
+              <div className="flex flex-wrap gap-2 pt-2">
+                {(project.stack || []).map((tech) => (
+                  <Badge 
+                    key={tech} 
+                    variant="secondary" 
+                    className="text-xs font-medium bg-accent text-accent-foreground hover:bg-accent/80"
+                  >
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </CardContent>
+
+            {/* Card Footer */}
+            <CardFooter className="flex flex-col sm:flex-row gap-3 justify-start pt-4">
+              <Button 
+                asChild 
+                variant={project.highlight ? "default" : "outline"}
+                className={`flex-1 ${project.highlight ? 'bg-primary hover:bg-primary/90' : 'border-border'}`}
               >
-                Ver Projeto
-              </a>
-              <a
-                href={project.codeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-indigo-800 text-white px-4 py-2 rounded font-bold hover:bg-indigo-700"
+                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                  <Zap className="mr-2 h-4 w-4" />
+                  Ver Deploy
+                </a>
+              </Button>
+              
+              <Button 
+                asChild 
+                variant="ghost" 
+                className="flex-1 text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                disabled={project.codeUrl === "Repositório Privado (Propriedade Intelectual)"}
               >
-                Ver Código
-              </a>
-            </div>
-          </div>
+                {project.codeUrl === "Repositório Privado (Propriedade Intelectual)" ? (
+                  <span>Repositório Privado</span>
+                ) : (
+                  <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 h-4 w-4" />
+                    Ver Código
+                  </a>
+                )}
+              </Button>
+            </CardFooter>
+          </Card>
         ))}
       </div>
     </section>

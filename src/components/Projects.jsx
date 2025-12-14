@@ -17,21 +17,21 @@ export default function Projects() {
       id: 0, 
       title: "Plataforma SaaS de Agendamento Online Multi-tenant",
       description: `
-        Uma Plataforma SaaS Multi-tenant de Agendamento Online que já está em produção e atendendo usuários ativos. Este projeto foi uma verdadeira imersão em arquitetura escalável e segurança de dados.
+        Uma Plataforma SaaS Multi-tenant de Agendamento Online que já está em produção e atendendo usuários ativos. Feita com o ecossistema Javascript.
       `,
       details: [ 
-        "Arquitetura Serverless com Next.js 14 e Supabase (PostgreSQL).",
-        "Segurança via Row-Level Security (RLS) para isolamento de dados Multi-tenant.",
-        "Otimização de Banco de Dados com Connection Pooling (PgBouncer).",
-        "Automação crítica via Vercel Cron Jobs (limpeza de horários expirados).",
-        "Comunicação Transacional (WhatsApp e Email) e Timezones resolvidos.",
+        "Arquitetura Serverless com Next.js 14 e Supabase (PostgreSQL) com Prisma ORM. Comunicação Transacional (WhatsApp e Email) e Timezones resolvidos.",
+        "Segurança via Row-Level Security (RLS) para isolamento de dados Multi-tenant. Otimização de Banco de Dados com Connection Pooling (PgBouncer).",
+        "Automação crítica via Vercel Cron Jobs (limpeza de horários expirados). Criação de horários dinâmicos para profissionais com base em sua disponibilidade semanal.",
+        "Dashboard Admin para gestão de usuários, agendamentos e horários. Área do Cliente para agendamento e gerenciamento de compromissos.",
+        "Login social via Google OAuth 2.0 (NextAuth.js) para uma experiência de cadastro rápida e segura"
       ],
       image: "/images/MeusAgendamentosAreaCliente.png", // Imagem de capa
       liveUrl: "https://meu-agendamento.vercel.app/",
       codeUrl: "Repositório Privado (Propriedade Intelectual)",
       stack: [
-        "Next.js 14 (App Router)", "React/JS", "PostgreSQL (Supabase)", 
-        "Prisma ORM", "Tailwind CSS", "Vercel", "RLS", "PgBouncer"
+        "Next.js 14 (App Router)", "React/JS", "Javascript", "PostgreSQL (Supabase)", 
+        "Prisma ORM", "Shadcn/ui", "Vercel", "RLS", "PgBouncer"
       ],
       highlight: true,
       gallery: [

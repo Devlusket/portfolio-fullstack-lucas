@@ -7,13 +7,13 @@ const highlights = [
   { 
     icon: Database, 
     title: "Segurança Multi-tenant (RLS)", 
-    description: "Expertise em Row-Level Security (RLS) no PostgreSQL/Supabase para garantir isolamento e segurança de dados em aplicações SaaS.", 
+    description: "Experiência em Row-Level Security (RLS) no PostgreSQL/Supabase para garantir isolamento e segurança de dados em aplicações SaaS.", 
     color: "text-green-500"
   },
   { 
     icon: TrendingUp, 
     title: "Arquitetura Escalável", 
-    description: "Experiência com Connection Pooling (PgBouncer) e ambiente Serverless (Vercel) para lidar com picos de tráfego e otimizar custos.", 
+    description: "Experiência com Connection Pooling (PgBouncer) e ambiente Serverless (Vercel) para lidar com picos de tráfego, e pipelines CI/CD para deploys automáticos.", 
     color: "text-blue-500"
   },
   { 
@@ -65,9 +65,9 @@ export default function About() {
             
             <p>
               O ponto central da minha experiência é o desenvolvimento e manutenção de uma Plataforma SaaS Multi-tenant. Neste projeto, aprofundei-me em:<br />
-                Next.js 15 (App Router) para renderização eficiente.
-                PostgreSQL/Supabase & Prisma para modelagem de dados complexos.
-                Implementação de RLS (Row-Level Security) e PgBouncer para alta disponibilidade e segurança crítica de dados.
+                Next.js 15 (App Router) para renderização eficiente no frontend. <br />
+                Node.js & Prisma (Api Router) para modelagem de dados complexos no backend. <br />
+                PostgreSLQ e Supabase para gerenciamento, com ênfase em segurança no banco de dados.
             </p>
             
             <p>

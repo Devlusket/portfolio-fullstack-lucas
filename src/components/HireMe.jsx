@@ -44,7 +44,7 @@ export default function HireMe() {
         </CardHeader>
         <CardContent>
           <p className="mb-8 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Interessado em ter um Fullstack Júnior com experiência em SaaS Multi-tenant, Next.js 15 e segurança de dados (RLS)? Envie uma mensagem ou vamos nos conectar.
+            Interessado em ter um Fullstack Júnior com experiência em SaaS Multi-tenant, Next.js 15 e segurança de dados? Envie uma mensagem ou vamos nos conectar.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">

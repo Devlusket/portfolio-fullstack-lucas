@@ -36,7 +36,7 @@ export default function Hero() {
       
       {/* Subtítulo de Destaque Técnico (O seu diferencial) */}
       <p className="max-w-3xl text-xl sm:text-2xl text-center text-muted-foreground mb-8">
-        Especializado em Next.js 15, Serverless (Vercel/Supabase) e arquitetura Multi-tenant com RLS.
+        Desenvolvedor Fullstack Júnior | Next.js | TypeScript | Node.js | Serverless Architecture | PostgreSQL & Prisma
       </p>
 
       {/* Ação Principal: CTA para o SaaS Multi-tenant */}

@@ -26,7 +26,7 @@ export default function Projects() {
         "Dashboard Admin para gestão de usuários, agendamentos e horários. Área do Cliente para agendamento e gerenciamento de compromissos.",
         "Login social via Google OAuth 2.0 (NextAuth.js) para uma experiência de cadastro rápida e segura"
       ],
-      image: "/images/MeusAgendamentosAreaCliente.png", // Imagem de capa
+      image: "/images/MeusAgendamentosBarbearia.png", // Imagem de capa
       liveUrl: "https://meu-agendamento.vercel.app/",
       codeUrl: "Repositório Privado (Propriedade Intelectual)",
       stack: [
@@ -35,7 +35,7 @@ export default function Projects() {
       ],
       highlight: true,
       gallery: [
-          "/images/MeusAgendamentosAreaCliente.png", 
+          "/images/MeusAgendamentosBarbearia.png", 
           "/images/MeusAgendamentosAreaProfissional.png", 
           "/images/MeusAgendamentosAreaAgendamento.png", 
       ]

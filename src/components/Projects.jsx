@@ -28,7 +28,7 @@ export default function Projects() {
       ],
       image: "/images/MeusAgendamentosBarbearia.png", // Imagem de capa
       liveUrl: "https://meu-agendamento.vercel.app/",
-      codeUrl: "Repositório Privado (Propriedade Intelectual)",
+      codeUrl: "https://github.com/Devlusket/projeto-saas",
       stack: [
         "Next.js 14 (App Router)", "React/JS", "Javascript", "PostgreSQL (Supabase)", 
         "Prisma ORM", "Shadcn/ui", "Vercel", "RLS", "PgBouncer"

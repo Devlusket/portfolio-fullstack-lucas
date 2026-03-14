@@ -31,12 +31,12 @@ export default function Hero() {
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-center mb-4">
         <span className="text-foreground">Lucas Soares,</span>
         <br className="sm:hidden" />
-        <span className="text-primary block sm:inline"> Fullstack Júnior</span>
+        <span className="text-primary block sm:inline"> Desenvolvedor Backend</span>
       </h1>
       
       {/* Subtítulo de Destaque Técnico (O seu diferencial) */}
       <p className="max-w-3xl text-xl sm:text-2xl text-center text-muted-foreground mb-8">
-        | Next.js | Javascript | TypeScript | Node.js | Serverless Architecture | PostgreSQL & Prisma
+        | Java | Spring Boot | REST APIs | PostgreSQL | Angular
       </p>
 
       {/* Ação Principal: CTA para o SaaS Multi-tenant */}

@@ -44,7 +44,7 @@ export default function HireMe() {
         </CardHeader>
         <CardContent>
           <p className="mb-8 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Interessado em ter um Fullstack Júnior com experiência em SaaS com o ecossistema Javascript? Envie uma mensagem ou vamos nos conectar.
+            Envie uma mensagem e vamos nos conectar!.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">

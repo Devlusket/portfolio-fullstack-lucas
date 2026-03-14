@@ -4,22 +4,22 @@ import { Separator } from "@/components/ui/separator";
 
 // Pontos principais que queremos que o recrutador veja de forma rápida
 const highlights = [
-  { 
-    icon: Database, 
-    title: "Segurança Multi-tenant (RLS)", 
-    description: "Experiência em Row-Level Security (RLS) no PostgreSQL/Supabase para garantir isolamento e segurança de dados em aplicações SaaS.", 
+  {
+    icon: Database,
+    title: "Backend Java & Spring Boot",
+    description: "Especializado em APIs REST com Spring Boot 3, Spring Security (JWT stateless), JPA/Hibernate, PostgreSQL e versionamento de banco com Flyway.",
     color: "text-green-500"
   },
-  { 
-    icon: TrendingUp, 
-    title: "Arquitetura Escalável", 
-    description: "Experiência com Connection Pooling (PgBouncer) e ambiente Serverless (Vercel) para lidar com picos de tráfego, e pipelines CI/CD para deploys automáticos.", 
+  {
+    icon: TrendingUp,
+    title: "Arquitetura & Boas Práticas",
+    description: "Experiência em arquitetura em camadas, princípios SOLID, mapeamento com MapStruct, exceptions customizadas e documentação com Swagger/OpenAPI.",
     color: "text-blue-500"
   },
-  { 
-    icon: Zap, 
-    title: "SaaS em Produção", 
-    description: "Tenho uma Plataforma de Agendamento Online Multi-tenant que está em produção, validando a capacidade de entrega de software real.", 
+  {
+    icon: Zap,
+    title: "Projetos em Produção",
+    description: "Sistema de Controle de Estoque B2B e Plataforma SaaS de Agendamento Multi-tenant em produção, validando a capacidade de entrega de software real.",
     color: "text-primary"
   },
 ];
@@ -30,9 +30,7 @@ export default function About() {
       <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground text-center mb-12">
         <span className="text-primary">|</span> Sobre Mim
       </h2>
-
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
         {/* Coluna 1: Destaques Técnicos (Cards) */}
         <div className="lg:col-span-1 space-y-4">
           {highlights.map((item) => (
@@ -47,31 +45,34 @@ export default function About() {
             </Card>
           ))}
         </div>
-        
+
         {/* Coluna 2/3: Descrição Narrativa (Card Principal) */}
         <Card className="lg:col-span-2 p-6 bg-card hover:shadow-xl transition-shadow duration-300">
           <CardHeader className="p-0 pb-4">
             <CardTitle className="text-2xl font-bold flex items-center gap-2">
-                <Code className="h-6 w-6 text-primary" />
-                Minha Jornada como <span className="text-primary">Fullstack Júnior</span>
+              <Code className="h-6 w-6 text-primary" />
+              Minha Jornada como <span className="text-primary">Desenvolvedor Backend</span>
             </CardTitle>
             <Separator className="mt-2 mb-4" />
           </CardHeader>
-
           <CardContent className="p-0 space-y-4 text-base leading-relaxed text-foreground/80">
             <p>
-              Minha paixão pelo desenvolvimento web evoluiu de um foco em Front-end (React, Next.js, Tailwind) para uma experiência robusta como Desenvolvedor Fullstack Júnior. Eu não apenas construo interfaces bonitas, mas também sou responsável pela arquitetura de back-end, infraestrutura e segurança de aplicações em produção.
+              Sou Desenvolvedor Backend Júnior com foco em Java e Spring Boot, construindo APIs REST
+              seguras, escaláveis e bem documentadas. Minha stack principal envolve Spring Security
+              com JWT stateless, JPA/Hibernate, PostgreSQL e Flyway para versionamento de banco —
+              com deploy automatizado via Railway.
             </p>
-            
             <p>
-              O ponto central da minha experiência é o desenvolvimento e manutenção de uma Plataforma SaaS Multi-tenant. Neste projeto, aprofundei-me em:<br />
-                Next.js 15 (App Router) para renderização eficiente no frontend. <br />
-                Node.js & Prisma (Api Router) para modelagem de dados complexos no backend. <br />
-                PostgreSLQ e Supabase para gerenciamento, com ênfase em segurança no banco de dados.
+              Antes de migrar para o ecossistema Java, atuei como Desenvolvedor Fullstack no
+              ecossistema JavaScript — com Next.js, TypeScript, React e PostgreSQL via Prisma —
+              chegando a colocar uma Plataforma SaaS Multi-tenant em produção com usuários ativos.
+              Esse histórico me dá uma visão completa do ciclo de uma aplicação, do banco de dados
+              até a interface.
             </p>
-            
             <p>
-              Estou sempre em busca de aprimoramento, focado em entregar soluções que sejam não apenas funcionais, mas também escaláveis, seguras e com uma excelente experiência de usuário. Pronto para enfrentar qualquer desafio técnico!
+              Busco minha primeira oportunidade como Desenvolvedor Backend Java, onde possa
+              contribuir com times que valorizam código limpo, boas práticas e aprendizado contínuo.
+              Pronto para enfrentar qualquer desafio técnico!
             </p>
           </CardContent>
         </Card>

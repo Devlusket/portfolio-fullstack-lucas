@@ -10,15 +10,25 @@ import TechIcon from "@/components/tech-icon";
 // Definindo tecnologias por categoria para melhor organização visual
 const techCategories = [
   {
-    name: "Fullstack Core & Frameworks",
+    name: "Desenvolvimento Backend",
     icon: Code,
+    color: "bg-yellow-500/10 text-yellow-500",
+    techs: [
+      { name: "Java", file: "java.svg" },
+      { name: "Spring Boot", file: "spring-boot.svg" },
+      { name: "Node.js", file: "nodejs.png" },
+      { name: "Angular", file: "angular.png" }
+    ],
+  },
+  {
+    name: "Fullstack  & Frameworks",
+    icon: Layout,
     color: "bg-primary/10 text-primary",
     techs: [
       { name: "Next.js", file: "next.svg" },
       { name: "React", file: "react-1.svg" },
       { name: "JavaScript", file: "javascript.svg" },
-      { name: "TypeScript", file: "typescript.svg" },
-      { name: "Node.js", file: "nodejs.png" },
+      { name: "TypeScript", file: "typescript.svg" }
     ],
   },
   {
@@ -29,18 +39,7 @@ const techCategories = [
       { name: "Supabase", file: "supabase.svg" },
       { name: "Prisma", file: "prisma.svg" }, 
       { name: "PostgreSQL", file: "postgres.svg" }, 
-    ],
-  },
-  {
-    name: "Design & Estilização",
-    icon: Layout,
-    color: "bg-yellow-500/10 text-yellow-500",
-    techs: [
-      { name: "Tailwind CSS", file: "tw.svg" },
-      { name: "HTML", file: "html.png" },
-      { name: "CSS", file: "css-3.svg" },
-      { name: "Shadcn", file: "shadcn.svg" },
-      { name: "Canva", file: "canva.png" },
+      { name: "MongoDB", file: "mongodb.svg" }
     ],
   },
 ];

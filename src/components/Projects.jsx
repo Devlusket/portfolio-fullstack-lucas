@@ -42,11 +42,11 @@ export default function Projects() {
       id: 1,
       title: "Plataforma SaaS de Agendamento Online Multi-tenant",
       description: `
-        Uma Plataforma SaaS Multi-tenant de Agendamento Online que já está em produção e atendendo usuários ativos. Feita com o ecossistema Javascript.
+        Uma Plataforma SaaS Multi-tenant de Agendamento Online que já está em produção. Feita com o ecossistema Javascript.
       `,
       details: [
         "Arquitetura Serverless com Next.js 14 e Supabase (PostgreSQL) com Prisma ORM. Comunicação Transacional (WhatsApp e Email) e Timezones resolvidos.",
-        "Segurança via Row-Level Security (RLS) para isolamento de dados Multi-tenant. Otimização de Banco de Dados com Connection Pooling (PgBouncer).",
+        "Segurança via Row-Level Security (RLS) para isolamento de dados. Otimização de Banco de Dados com Connection Pooling (PgBouncer).",
         "Automação crítica via Vercel Cron Jobs (limpeza de horários expirados). Criação de horários dinâmicos para profissionais com base em sua disponibilidade semanal.",
         "Dashboard Admin para gestão de usuários, agendamentos e horários. Área do Cliente para agendamento e gerenciamento de compromissos.",
         "Login social via Google OAuth 2.0 (NextAuth.js) para uma experiência de cadastro rápida e segura"
@@ -87,6 +87,33 @@ export default function Projects() {
         "/images/plumas-de-cristal3.png",
       ],
     },
+    {
+  id: 3,
+  title: "Controle de Estoque B2B — Frontend Angular",
+  description: `
+    Interface web completa para o sistema de controle de estoque B2B, consumindo a API REST do backend.
+    Autenticação JWT, controle de acesso por perfil e CRUD completo de movimentações, produtos, cidades e usuários.
+  `,
+  details: [
+    "Estrutura feature-based (features/cidades, features/produtos) espelhando a separação por responsabilidade do backend — cada feature contém sua lista e formulário independentes.",
+    "Autenticação JWT com interceptor HTTP que injeta o token automaticamente em toda requisição — equivalente ao JwtAuthFilter do Spring. Token decodificado com atob() nativo, sem biblioteca externa.",
+    "Controle de acesso por perfil via functional guards: AuthGuard protege rotas autenticadas e RoleGuard protege rotas por role — CLIENTE redirecionado ao tentar acessar /usuarios.",
+    "Formulário de movimentação com campo condicional via valueChanges — cidadeDestino aparece apenas em TRANSFERENCIA. Para CLIENTE, cidades filtradas apenas pela sede.",
+    "Deploy com CI/CD automático via GitHub no Railway. Tailwind CSS v3 com visual estilo shadcn — badges coloridos por tipo de movimentação, tipografia Inter.",
+  ],
+  image: "/images/dashboard-estoque.png",
+  liveUrl: "https://controle-de-estoque-frontend-production.up.railway.app",
+  codeUrl: "https://github.com/Devlusket/Controle-de-Estoque-Frontend",
+  stack: [
+    "Angular 21", "TypeScript", "Tailwind CSS", "RxJS",
+    "JWT", "Angular Router", "Railway"
+  ],
+  highlight: false,
+  gallery: [
+    "/images/login-estoque.png",
+    "/images/dashboard-estoque.png",
+  ]
+},
   ];
 
   const sortedProjects = projects.sort((a, b) => (a.id > b.id ? 1 : -1));

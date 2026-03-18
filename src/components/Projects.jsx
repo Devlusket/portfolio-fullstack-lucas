@@ -89,13 +89,14 @@ export default function Projects() {
     },
     {
   id: 3,
-  title: "Controle de Estoque B2B — Frontend Angular",
+  title: "Controle de Estoque B2B — Frontend PWA Angular",
   description: `
     Interface web completa para o sistema de controle de estoque B2B, consumindo a API REST do backend.
     Autenticação JWT, controle de acesso por perfil e CRUD completo de movimentações, produtos, cidades e usuários.
   `,
   details: [
     "Estrutura feature-based (features/cidades, features/produtos) espelhando a separação por responsabilidade do backend — cada feature contém sua lista e formulário independentes.",
+    "PWA — Progressive Web App: O sistema também pode ser instalado como app de desktop via PWA nativo do Angular",
     "Autenticação JWT com interceptor HTTP que injeta o token automaticamente em toda requisição — equivalente ao JwtAuthFilter do Spring. Token decodificado com atob() nativo, sem biblioteca externa.",
     "Controle de acesso por perfil via functional guards: AuthGuard protege rotas autenticadas e RoleGuard protege rotas por role — CLIENTE redirecionado ao tentar acessar /usuarios.",
     "Formulário de movimentação com campo condicional via valueChanges — cidadeDestino aparece apenas em TRANSFERENCIA. Para CLIENTE, cidades filtradas apenas pela sede.",

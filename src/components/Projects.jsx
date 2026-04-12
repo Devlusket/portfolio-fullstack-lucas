@@ -23,15 +23,15 @@ export default function Projects() {
         "Arquitetura em camadas (Controller → Service → Repository) com autenticação JWT stateless e autorização por roles (ADMIN/CLIENTE) via Spring Security e @PreAuthorize.",
         "Sistema de movimentações com três tipos: ENTRADA (recebimento externo), SAÍDA (consumo/venda) e TRANSFERÊNCIA (entre filiais) — cidade de origem extraída automaticamente do token JWT.",
         "Regra de negócio: CLIENTE só pode transferir para a sede, enquanto ADMIN pode transferir para qualquer cidade. Validações centralizadas no Service com exceptions customizadas.",
-        "Banco de dados com PostgreSQL, versionamento de schema via Flyway, BCrypt para hash de senhas e soft delete em produtos/usuários para preservar histórico.",
-        "Deploy com CI/CD automático via GitHub no Railway. Documentação interativa com Swagger/OpenAPI disponível em produção.",
+        "Banco de dados com PostgreSQL via Neon, versionamento de schema via Flyway, BCrypt para hash de senhas e soft delete em produtos/usuários para preservar histórico.",
+        "Deploy com CI/CD automático via GitHub no Render. Documentação interativa com Swagger/OpenAPI disponível em produção.",
       ],
       image: "/images/estoque-swagger.png",
-      liveUrl: "https://controle-de-estoque-production-4472.up.railway.app/swagger-ui/index.html",
+      liveUrl: "https://controle-de-estoque-backend-7h07.onrender.com/swagger-ui/index.html",
       codeUrl: "https://github.com/Devlusket/Controle-de-Estoque",
       stack: [
         "Java 21", "Spring Boot 3", "Spring Security", "JWT",
-        "PostgreSQL", "Flyway", "MapStruct", "Swagger", "Railway"
+        "PostgreSQL", "Flyway", "MapStruct", "Swagger", "Render", "Neon"
       ],
       highlight: true,
       gallery: [
@@ -100,14 +100,14 @@ export default function Projects() {
     "Autenticação JWT com interceptor HTTP que injeta o token automaticamente em toda requisição — equivalente ao JwtAuthFilter do Spring. Token decodificado com atob() nativo, sem biblioteca externa.",
     "Controle de acesso por perfil via functional guards: AuthGuard protege rotas autenticadas e RoleGuard protege rotas por role — CLIENTE redirecionado ao tentar acessar /usuarios.",
     "Formulário de movimentação com campo condicional via valueChanges — cidadeDestino aparece apenas em TRANSFERENCIA. Para CLIENTE, cidades filtradas apenas pela sede.",
-    "Deploy com CI/CD automático via GitHub no Railway. Tailwind CSS v3 com visual estilo shadcn — badges coloridos por tipo de movimentação, tipografia Inter.",
+    "Deploy com CI/CD automático via GitHub no Vercel. Tailwind CSS v3 com visual estilo shadcn — badges coloridos por tipo de movimentação, tipografia Inter.",
   ],
   image: "/images/dashboard-estoque.png",
-  liveUrl: "https://controle-de-estoque-frontend-production.up.railway.app",
+  liveUrl: "https://controle-de-estoque-ashen.vercel.app",
   codeUrl: "https://github.com/Devlusket/Controle-de-Estoque-Frontend",
   stack: [
     "Angular 21", "TypeScript", "Tailwind CSS", "RxJS",
-    "JWT", "Angular Router", "Railway"
+    "JWT", "Angular Router", "Vercel"
   ],
   highlight: false,
   gallery: [

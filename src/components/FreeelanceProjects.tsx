@@ -67,6 +67,8 @@ const freelanceProjects = [
   },
 ];
 
+
+
 export default function FreelanceProjects() {
   return (
     <section id="freelance" className="py-20 px-4 md:px-8 bg-background">

@@ -28,7 +28,7 @@ export default function Hero() {
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-center mb-4">
         <span className="text-foreground">Lucas Soares,</span>
         <br className="sm:hidden" />
-        <span className="text-primary block sm:inline"> Desenvolvedor Fullstack Freelancer</span>
+        <span className="text-primary block sm:inline"> Desenvolvedor Fullstack</span>
       </h1>
 
       {/* Subtítulo */}

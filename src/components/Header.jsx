@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Menu, FileText, Code, Mail } from "lucide-react"; 
+import { Menu, FileText, Code, Mail, Briefcase } from "lucide-react"; 
 
 // Componentes Shadcn/ui
 import { Button } from "@/components/ui/button"; 
@@ -19,10 +19,11 @@ import { ModeToggle } from "@/components/ui/mode-toggle";
 const navItems = [
   { 
     href: "https://drive.google.com/file/d/1dDqCmWwAoMlP0EH-_daCfEZrR8lTmTw1/view?usp=sharing",
-    label: "Currículo (PDF)", 
+    label: "Currículo", 
     icon: FileText,
-    external: true // Indica que é um link externo
+    external: true
   },
+  { href: "#freelance", label: "Freelance", icon: Briefcase, external: false },
   { href: "#projects", label: "Projetos", icon: Code, external: false },
   { href: "#hireme", label: "Contato", icon: Mail, external: false },
 ];
